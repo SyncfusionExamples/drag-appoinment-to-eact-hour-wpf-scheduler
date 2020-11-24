@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfScheduler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:local="clr-namespace:WpfScheduler"
+        xmlns:interactivity="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:skinmanager ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        skinmanager:SfSkinManager.VisualStyle="MaterialLight"
+        WindowStartupLocation="CenterScreen" Height="600" Width="950"  >
+
+    <Window.DataContext>
+        <local:SchedulerViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <syncfusion:SfScheduler x:Name="Schedule"
+                            ViewType="Week"
+                            ResourceGroupType="Resource"
+                            ResourceCollection="{Binding Resources}"
+                            ItemsSource="{Binding Events}"
+                            AppointmentEditFlag="DragDrop">
+            <interactivity:Interaction.Behaviors>
+                <local:SchedulerBehavior/>
+            </interactivity:Interaction.Behaviors>
+        </syncfusion:SfScheduler>
+    </Grid>
+</Window>  
