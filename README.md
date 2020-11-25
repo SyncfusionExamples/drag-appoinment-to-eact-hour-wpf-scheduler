@@ -1,2 +1,1 @@
-# drag-appoinment-to-eact-hour-wpf-scheduler
-How to drag appointment to the exact hour in WPF Schedule (SfScheduler)
+**[View document in Syncfusion WPF Knowledge base](https://www.syncfusion.com/kb/12112/how-to-drag-appointment-to-the-exact-hour-in-wpf-schedule-sfscheduler)**
